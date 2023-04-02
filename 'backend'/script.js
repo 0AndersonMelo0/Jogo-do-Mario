@@ -163,4 +163,3 @@ function reset(){
 document.addEventListener('keydown', jump);
 
 const jumpCell = document.querySelector('.ButJump');
-document.addEventListener('click', jump)
