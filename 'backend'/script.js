@@ -53,21 +53,16 @@ function Verifcperdeu(){
 }
 
 function contPontos(){
+
     function TubPont(){
         const pont = setInterval(()=>{
-            if(perdeu==0){
+            if(perdeu==0 && ponto<10){
                 ponto+=1
                 pontos.innerHTML = `${ponto}`;
             }
             else if(perdeu==1){
                 clearInterval(pont)
-            }
-            if(ponto==10){
-                tubo.style.right = "90000px";
-                tubo.classList.remove('aniTubo');
-                tubo.style.bottom = "0px";
-                tubo.src = "imagens/bala.png";
-                tubo.classList.add('aniBala');
+            }else{
                 clearInterval(pont)
             }
 
@@ -75,20 +70,28 @@ function contPontos(){
         }
 
     function TubPont2(){
+        tubo.style.right = "90000px";
+        tubo.classList.remove('aniTubo');
+        tubo.style.bottom = "0px";
+        tubo.src = "imagens/bala.png";
+        tubo.classList.add('aniBala');
         const pont2 = setInterval(()=>{
-            if(ponto>=10){
-                if(perdeu==0){
-                    ponto+=1
-                    pontos.innerHTML = `${ponto}`;
-                }
-                else if(perdeu==1){
-                    clearInterval(pont2)
-                }
-            }},800)
+            if(perdeu==0){
+                ponto+=1
+                pontos.innerHTML = `${ponto}`;
+            }
+            else if(perdeu==1){
+                clearInterval(pont2);
+            }
+        },800)
             }
 
     TubPont()
-    setTimeout(TubPont2,1500*10)
+    const y = setTimeout(()=>{
+        if(ponto==10){
+            TubPont2();
+    }},1500*10);
+
 }
 
 contPontos()
