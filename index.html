@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mario</title>
+    <link rel="stylesheet" href="'backend'/style.css">
+</head>
+<body>
+    <h2 class="nome">Jogo do Anderson</h2>
+    <div class="box">
+        <img src="imagens/tubo.png" class="tubo aniTubo">
+        <img src="imagens/mario-correndo.gif" class="mario">
+        <img src="imagens/nuvem.png" class="nuvem">
+        <img src="imagens/nuvem.png" class="nuvem2">
+        <div class="game-over">
+            <img src="imagens/sonic-game-over.png" class="over">
+            <button class="button" onclick="reset()" disabled>Reset</button>
+        </div>
+    </div>
+    <h4 class="nome">Pontos: <span class="pontos"> </span></h4>
+
+    <button class="ButJump">Jump Para Celular</button>
+
+    <script src="'backend'/script.js"></script>
+</body>
+</html>
