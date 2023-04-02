@@ -95,7 +95,7 @@ contPontos()
 
 Verifcperdeu()
 
-const jump = ()=>{
+function jump(){
     mario.classList.add('jump');
 
     setTimeout(() => {
@@ -161,5 +161,3 @@ function reset(){
 }
 
 document.addEventListener('keydown', jump);
-
-const jumpCell = document.querySelector('.ButJump');
